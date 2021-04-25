@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Yogi的博客</title>
   
+  <subtitle>LNMP重度使用者</subtitle>
+  <link href="http://104.168.159.133:4000/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
+  <link href="http://104.168.159.133:4000/"/>
   <updated>2021-04-25T02:45:56.485Z</updated>
-  <id>http://example.com/</id>
+  <id>http://104.168.159.133:4000/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Yogi</name>
     
   </author>
   
@@ -18,8 +18,8 @@
   
   <entry>
     <title>开张了</title>
-    <link href="http://example.com/2021/04/24/hello-world/"/>
-    <id>http://example.com/2021/04/24/hello-world/</id>
+    <link href="http://104.168.159.133:4000/2021/04/24/hello-world/"/>
+    <id>http://104.168.159.133:4000/2021/04/24/hello-world/</id>
     <published>2021-04-24T07:58:00.000Z</published>
     <updated>2021-04-25T02:45:56.485Z</updated>
     
