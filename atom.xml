@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Yogi的博客</title>
-  
+  <icon>https://www.gravatar.com/avatar/c050755423dc30697ee469847212c6d7</icon>
   <subtitle>LNMP使用者</subtitle>
   <link href="http://104.168.159.133:4000/atom.xml" rel="self"/>
   
@@ -11,7 +11,7 @@
   
   <author>
     <name>Yogi</name>
-    
+    <email>zyjqianfuyu@163.com</email>
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
