@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://104.168.159.133:4000/2021/04/25/%E7%BA%A2%E5%8C%85%E7%AE%A1%E7%90%86/</loc>
+    
+    <lastmod>2021-04-25</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://104.168.159.133:4000/archives/index.html</loc>
+    
+    <lastmod>2021-04-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://104.168.159.133:4000/tags/index.html</loc>
     
     <lastmod>2021-04-25</lastmod>
