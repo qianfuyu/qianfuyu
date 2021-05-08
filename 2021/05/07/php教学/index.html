@@ -6,18 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://104.168.159.133:4000">
-  <title>Archives | Yogi的博客</title>
+  <title>php介绍 | Yogi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="生活不止眼前的苟且，还有诗和远方">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yogi的博客">
-<meta property="og:url" content="http://104.168.159.133:4000/archives/index.html">
+  <meta name="description" content="什么是PHP？    一种被广泛应用的开源通用脚本语言，尤其适用于Web开发    英文名叫 Hypertext Preprocessor    中文名叫 世界上最好的语言 PHP能做什么？   ◦ 网站和 web 应用程序（服务器端脚本）    ◦ 命令行脚本    ◦ 桌面（GUI）应用程序 PHP运行环境？    LNMP：Linux+Nginx+MySQL+PHP    web网站一般运行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php介绍">
+<meta property="og:url" content="http://104.168.159.133:4000/2021/05/07/php%E6%95%99%E5%AD%A6/index.html">
 <meta property="og:site_name" content="Yogi的博客">
-<meta property="og:description" content="生活不止眼前的苟且，还有诗和远方">
+<meta property="og:description" content="什么是PHP？    一种被广泛应用的开源通用脚本语言，尤其适用于Web开发    英文名叫 Hypertext Preprocessor    中文名叫 世界上最好的语言 PHP能做什么？   ◦ 网站和 web 应用程序（服务器端脚本）    ◦ 命令行脚本    ◦ 桌面（GUI）应用程序 PHP运行环境？    LNMP：Linux+Nginx+MySQL+PHP    web网站一般运行">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://104.168.159.133:4000/images/pasted-2.png">
+<meta property="article:published_time" content="2021-05-07T08:26:00.000Z">
+<meta property="article:modified_time" content="2021-05-08T05:28:22.168Z">
 <meta property="article:author" content="Yogi">
 <meta property="article:tag" content="PHP、Go、MySQL、Linux、Vue、ThinkPHP、Laravel、培训、自学、武汉">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://104.168.159.133:4000/images/pasted-2.png">
   
     <link rel="alternative" href="/atom.xml" title="Yogi的博客" type="application/atom+xml">
   
@@ -145,76 +149,117 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-php教学" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      php介绍
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/07/php%E6%95%99%E5%AD%A6/" class="archive-article-date">
+
+        
+        <a href="/2021/05/07/php%E6%95%99%E5%AD%A6/" class="archive-article-date">
   	<time datetime="2021-05-07T08:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-07</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/07/php%E6%95%99%E5%AD%A6/">php介绍</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>什么是PHP？<br>    一种被广泛应用的开源通用脚本语言，尤其适用于Web开发<br>    英文名叫 Hypertext Preprocessor<br>    中文名叫 世界上最好的语言</p>
+<p>PHP能做什么？<br>   ◦ 网站和 web 应用程序（服务器端脚本）<br>    ◦ 命令行脚本<br>    ◦ 桌面（GUI）应用程序</p>
+<p>PHP运行环境？<br>    LNMP：Linux+Nginx+MySQL+PHP<br>    web网站一般运行在Linux服务器上，稳定安全，使用Nginx作为对外窗口，使用MySQL存储数据，PHP操作数据库。<br>   完整请求：客户端请求前端，Nginx把请求转给PHP，PHP调用响应接口，操作MySQL数据库，然后PHP重组数据结构，返回给Nginx，最后Nginx把数据交给前端，完成请求。 </p>
+<p><img src="/images/pasted-2.png" alt="upload successful"></p>
+<p>PHP安装？<br>    参考：<a target="_blank" rel="noopener" href="https://lnmp.org/install.html">https://lnmp.org/install.html</a><br>    注意：设置时区，开启MySQL扩展，编译FPM模式</p>
+<p>FastCGI 进程管理器（FPM）<br>    本文只讨论最常用的fpm模式，swoole会改变生命周期，暂不讨论<br>   编译 PHP 时需要 –enable-fpm 配置选项来支持FPM模式。<br>   功能：<br>          平滑停止/启动<br>      文件上传优化支持<br>      慢日志<br>        动态／静态子进程产生<br>      fastcgi_finish_request 特殊功能：用于在请求完成和刷新数据后，继续在后台执行耗时的工作（录入视频转换、统计处理等）；   </p>
+<p>php-fmp配置注意事项：<br>    request_terminate_timeout  请求的超时中止时间，建议30s<br>    request_slowlog_timeout   请求超过多久写入慢日志<br>   rlimit_files  打开文件描述符的rlimit限制，建议65535<br>    access.log      访问日志的位置<br>   error.log     错误日志的位置 </p>
+<p>PHP命令行模式？<br>    Linux系统：php -f ‘/root/test.php’<br>   Windows系统：php.exe -f ‘test.php’</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/payforme.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/04/24/hello-world/" class="archive-article-date">
-  	<time datetime="2021-04-24T07:58:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-04-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2021/04/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hello,world!</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/04/24/hello-world/">hello,world!</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -237,8 +282,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

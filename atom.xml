@@ -6,7 +6,7 @@
   <link href="http://104.168.159.133:4000/atom.xml" rel="self"/>
   
   <link href="http://104.168.159.133:4000/"/>
-  <updated>2021-04-25T05:48:44.457Z</updated>
+  <updated>2021-05-08T05:28:22.168Z</updated>
   <id>http://104.168.159.133:4000/</id>
   
   <author>
@@ -17,19 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>红包管理</title>
-    <link href="http://104.168.159.133:4000/2021/04/25/%E7%BA%A2%E5%8C%85%E7%AE%A1%E7%90%86/"/>
-    <id>http://104.168.159.133:4000/2021/04/25/%E7%BA%A2%E5%8C%85%E7%AE%A1%E7%90%86/</id>
-    <published>2021-04-25T05:48:26.000Z</published>
-    <updated>2021-04-25T05:48:44.457Z</updated>
+    <title>php介绍</title>
+    <link href="http://104.168.159.133:4000/2021/05/07/php%E6%95%99%E5%AD%A6/"/>
+    <id>http://104.168.159.133:4000/2021/05/07/php%E6%95%99%E5%AD%A6/</id>
+    <published>2021-05-07T08:26:00.000Z</published>
+    <updated>2021-05-08T05:28:22.168Z</updated>
     
-    <content type="html"><![CDATA[<p>何辨别空气币、传销币、资金盘<br>何辨别空气币、传销币、资金盘<br>何辨别空气币、传销币、资金盘<br>何辨别空气币、传销币、资金盘<br>何辨别空气币、传销币、资金盘<br>何辨别空气币、传销币、资金盘</p>]]></content>
+    <content type="html"><![CDATA[<p>什么是PHP？<br>    一种被广泛应用的开源通用脚本语言，尤其适用于Web开发<br>    英文名叫 Hypertext Preprocessor<br>    中文名叫 世界上最好的语言</p><p>PHP能做什么？<br>   ◦ 网站和 web 应用程序（服务器端脚本）<br>    ◦ 命令行脚本<br>    ◦ 桌面（GUI）应用程序</p><p>PHP运行环境？<br>    LNMP：Linux+Nginx+MySQL+PHP<br>    web网站一般运行在Linux服务器上，稳定安全，使用Nginx作为对外窗口，使用MySQL存储数据，PHP操作数据库。<br>   完整请求：客户端请求前端，Nginx把请求转给PHP，PHP调用响应接口，操作MySQL数据库，然后PHP重组数据结构，返回给Nginx，最后Nginx把数据交给前端，完成请求。 </p><p><img src="/images/pasted-2.png" alt="upload successful"></p><p>PHP安装？<br>    参考：<a href="https://lnmp.org/install.html">https://lnmp.org/install.html</a><br>    注意：设置时区，开启MySQL扩展，编译FPM模式</p><p>FastCGI 进程管理器（FPM）<br>    本文只讨论最常用的fpm模式，swoole会改变生命周期，暂不讨论<br>   编译 PHP 时需要 –enable-fpm 配置选项来支持FPM模式。<br>   功能：<br>          平滑停止/启动<br>      文件上传优化支持<br>      慢日志<br>        动态／静态子进程产生<br>      fastcgi_finish_request 特殊功能：用于在请求完成和刷新数据后，继续在后台执行耗时的工作（录入视频转换、统计处理等）；   </p><p>php-fmp配置注意事项：<br>    request_terminate_timeout  请求的超时中止时间，建议30s<br>    request_slowlog_timeout   请求超过多久写入慢日志<br>   rlimit_files  打开文件描述符的rlimit限制，建议65535<br>    access.log      访问日志的位置<br>   error.log     错误日志的位置 </p><p>PHP命令行模式？<br>    Linux系统：php -f ‘/root/test.php’<br>   Windows系统：php.exe -f ‘test.php’</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;何辨别空气币、传销币、资金盘&lt;br&gt;何辨别空气币、传销币、资金盘&lt;br&gt;何辨别空气币、传销币、资金盘&lt;br&gt;何辨别空气币、传销币、资金盘&lt;br&gt;何辨别空气币、传销币、资金盘&lt;br&gt;何辨别空气币、传销币、资金盘&lt;/p&gt;
-</summary>
+    <summary type="html">&lt;p&gt;什么是PHP？&lt;br&gt;    一种被广泛应用的开源通用脚本语言，尤其适用于Web开发&lt;br&gt;    英文名叫 Hypertext Preprocessor&lt;br&gt;    中文名叫 世界上最好的语言&lt;/p&gt;
+&lt;p&gt;PHP能做什么？&lt;br&gt;   ◦ 网站和 web 应用程序（服</summary>
       
     
     
@@ -38,19 +38,19 @@
   </entry>
   
   <entry>
-    <title>开张了</title>
+    <title>hello,world!</title>
     <link href="http://104.168.159.133:4000/2021/04/24/hello-world/"/>
     <id>http://104.168.159.133:4000/2021/04/24/hello-world/</id>
     <published>2021-04-24T07:58:00.000Z</published>
-    <updated>2021-04-25T02:45:56.485Z</updated>
+    <updated>2021-04-26T04:32:35.416Z</updated>
     
-    <content type="html"><![CDATA[<ol><li>Adminlumens后台-红包管理-红包类型管理-添加红包类型<br>① 会向redpacket_type表写入记录<br>② Adminlumens后台调用lumen-cp125接口refreshCacheByRedenvelopeCacheSetInfo生成红包列表<br>③ Lumen-cp125接口Common_setInfo查询正常红包写入redis，并处理过期红包，状态改为2<br>④ 最终把所有可用的红包列表都写入RedenvelopeList[‘info’]=Redenvelope_packet_info 红包key</li></ol><ol start="2"><li>Lumen-cp125接口-grab抢红包接口<br>① 排序虚拟用户、不能重复抢、红包是否已抢光<br>② 加锁成功后，判断用户是否已经抢过，</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>新的开始：<br>    三十岁的自己要再努力些<br>    其实一直都想做自己的技术博客，之前一直忙，操心其他的事。<br>    做技术有五年多了，还没有自己的博客，有点说不过去。</p><p>准备工作：<br>   之前选了很多模板都不喜欢，要么安装自带很多插件，要么功能太强，已经背离了简单写博文的设计初衷，知道看到十八师傅的hexo博客，觉得很不错，简洁，该有的功能都有，而且这东西也不需要数据库，纯文本模式，就连PHP都不需要，安装也简单，捣鼓了一下午，就搞起来了，甚合我意</p><p>安装过程：<br>    <a href="https://www.jianshu.com/p/84a8384be1ae">https://www.jianshu.com/p/84a8384be1ae</a><br>    <a href="https://github.com/litten/hexo-theme-yilia">https://github.com/litten/hexo-theme-yilia</a></p><p>计划：<br>    安装就不多赘述了，这里说说自己的计划，刚好自己有一个月的休息时间，打算把自己这几年写到的东西做个总结，以写博文的方式分享给大家，希望对刚入行的朋友有所帮助，也是对自己这几年的回顾，如果您已经是大神就不看了吧。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;Adminlumens后台-红包管理-红包类型管理-添加红包类型&lt;br&gt;① 会向redpacket_type表写入记录&lt;br&gt;② Adminlumens后台调用lumen-cp125接口refreshCacheByRedenvelopeCacheSetInfo生</summary>
+    <summary type="html">&lt;p&gt;新的开始：&lt;br&gt;    三十岁的自己要再努力些&lt;br&gt;    其实一直都想做自己的技术博客，之前一直忙，操心其他的事。&lt;br&gt;    做技术有五年多了，还没有自己的博客，有点说不过去。&lt;/p&gt;
+&lt;p&gt;准备工作：&lt;br&gt;   之前选了很多模板都不喜欢，要么安装自带很多插件，</summary>
       
     
     
