@@ -147,6 +147,77 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-PHP语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/05/08/PHP%E8%AF%AD%E6%B3%95/">PHP语法</a>
+    </h1>
+  
+
+        
+        <a href="/2021/05/08/PHP%E8%AF%AD%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2021-05-08T01:13:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>注意：本文是以Linux系统为例！</p>
+<p>PHP标记<br><?php
+    // 打印hello,world!
+    $str = 'hello,world!';
+   echo $str;
+?><br>php以 <?php 作为标识符，后面以 ?> 作为结尾</p>
+<p>PHP数据类型<br>  bool  布尔型  【字符串’0’也为false，空数组[]也为false】<br>  int  整型    【超出PHP_INT_MAX最大值，就变成浮点型】<br>  float 浮点型  【double和float是相同的，浮点数之间不要比较！】<br>  string 字符串 【双引号””会解析特殊字符\r\n\，建议使用PHP_EOL换行】<br>  array 数组   【使用strcmp安全比较二个字符串】<br>  object 对象</p>
+        
+          <a class="article-more-a" href="/2021/05/08/PHP%E8%AF%AD%E6%B3%95/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/05/08/PHP%E8%AF%AD%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-php教学" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -169,13 +240,10 @@
       
         <p>什么是PHP？<br>    一种被广泛应用的开源通用脚本语言，尤其适用于Web开发<br>    英文名叫 Hypertext Preprocessor<br>    中文名叫 世界上最好的语言</p>
 <p>PHP能做什么？<br>   ◦ 网站和 web 应用程序（服务器端脚本）<br>    ◦ 命令行脚本<br>    ◦ 桌面（GUI）应用程序</p>
-<p>PHP运行环境？<br>    LNMP：Linux+Nginx+MySQL+PHP<br>    web网站一般运行在Linux服务器上，稳定安全，使用Nginx作为对外窗口，使用MySQL存储数据，PHP操作数据库。<br>   完整请求：客户端请求前端，Nginx把请求转给PHP，PHP调用响应接口，操作MySQL数据库，然后PHP重组数据结构，返回给Nginx，最后Nginx把数据交给前端，完成请求。 </p>
-<p><img src="/images/pasted-2.png" alt="upload successful"></p>
-<p>PHP安装？<br>    参考：<a target="_blank" rel="noopener" href="https://lnmp.org/install.html">https://lnmp.org/install.html</a><br>    注意：设置时区，开启MySQL扩展，编译FPM模式</p>
-<p>FastCGI 进程管理器（FPM）<br>    本文只讨论最常用的fpm模式，swoole会改变生命周期，暂不讨论<br>   编译 PHP 时需要 –enable-fpm 配置选项来支持FPM模式。<br>   功能：<br>          平滑停止/启动<br>      文件上传优化支持<br>      慢日志<br>        动态／静态子进程产生<br>      fastcgi_finish_request 特殊功能：用于在请求完成和刷新数据后，继续在后台执行耗时的工作（录入视频转换、统计处理等）；   </p>
-<p>php-fmp配置注意事项：<br>    request_terminate_timeout  请求的超时中止时间，建议30s<br>    request_slowlog_timeout   请求超过多久写入慢日志<br>   rlimit_files  打开文件描述符的rlimit限制，建议65535<br>    access.log      访问日志的位置<br>   error.log     错误日志的位置 </p>
-<p>PHP命令行模式？<br>    Linux系统：php -f ‘/root/test.php’<br>   Windows系统：php.exe -f ‘test.php’</p>
-
+<p>PHP运行环境？<br>    LNMP：Linux+Nginx+MySQL+PHP<br>    web网站一般运行在Linux服务器上，稳定安全，使用Nginx作为对外窗口，使用MySQL存储数据，PHP操作数据库。<br>   完整请求：客户端请求前端，Nginx把请求转给PHP，PHP调用响应接口，操作MySQL数据库，然后PHP重组数据结构，返回给Nginx，最后Nginx把数据交给前端，完成请求。</p>
+        
+          <a class="article-more-a" href="/2021/05/07/php%E6%95%99%E5%AD%A6/#more">more >></a>
+        
       
 
       

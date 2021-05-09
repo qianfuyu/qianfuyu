@@ -6,7 +6,7 @@
   <link href="http://104.168.159.133:4000/atom.xml" rel="self"/>
   
   <link href="http://104.168.159.133:4000/"/>
-  <updated>2021-05-08T05:28:22.168Z</updated>
+  <updated>2021-05-08T14:28:05.266Z</updated>
   <id>http://104.168.159.133:4000/</id>
   
   <author>
@@ -17,20 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>PHP语法</title>
+    <link href="http://104.168.159.133:4000/2021/05/08/PHP%E8%AF%AD%E6%B3%95/"/>
+    <id>http://104.168.159.133:4000/2021/05/08/PHP%E8%AF%AD%E6%B3%95/</id>
+    <published>2021-05-08T01:13:11.000Z</published>
+    <updated>2021-05-08T14:28:05.266Z</updated>
+    
+    <content type="html"><![CDATA[<p>注意：本文是以Linux系统为例！</p><p>PHP标记<br><?php    // 打印hello,world!    $str = 'hello,world!';   echo $str;?><br>php以 <?php 作为标识符，后面以 ?> 作为结尾</p><p>PHP数据类型<br>  bool  布尔型  【字符串’0’也为false，空数组[]也为false】<br>  int  整型    【超出PHP_INT_MAX最大值，就变成浮点型】<br>  float 浮点型  【double和float是相同的，浮点数之间不要比较！】<br>  string 字符串 【双引号””会解析特殊字符\r\n\，建议使用PHP_EOL换行】<br>  array 数组   【使用strcmp安全比较二个字符串】<br>  object 对象</p><span id="more"></span>  <p>  callable 可调用<br>  iterable 可迭代<br>  resource 资源类型<br>  NULL 无类型<br>通过 gettype() 函数获取类型</p><p>PHP变量<br>    变量名只能使用大小写字母，下划线_,数字<br>    变量名区分大小写<br>   变量不能使用关键字，如if、for、function<br>   变量最好先定义再使用，定义的时候要赋值，js可以不赋值</p><p>公司命名规则：<br>    变量名小写 $str = “123”<br>   函数名加下划线 myFun()<br>   类名大写 myClass(){}<br>   常量全大写 const COUNT = 1 </p><p>引用传递：<br>    两个变量指向同样一个内存数据，只要一个变量变了，都跟着改变值<br>    $str1 = ‘1’;<br>   $str2 = &str1;</p><p>可变变量：<br>    go和js里面没有<br>   $str1 = ‘123’;<br>   $str2 = ‘str1’;<br>   echo $$str2;            // 打印 123</p><p>超全局变量：超全局作用域的变量都是数组！<br>    $_GET,$_POST,$_SERVER,$_REQUEST,$CLOBALS,$_COOKIE,$_SESSION<br>    $_SERVER 存储服务器端或客户端的请求信息<br>        REMOTE_ADDR 用户IP地址<br>      SERVER_ADDR 服务器IP地址<br>      SERVER_NAME 服务器名<br>      PHP_SELF 当前网页文件路径<br>      QUERY_STRING 请求的完整字符串<br>              <a href="http://www.xxx.com/test.php?a=5&amp;b=10">www.xxx.com/test.php?a=5&amp;b=10</a> 得到 a=5&amp;b=10</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;注意：本文是以Linux系统为例！&lt;/p&gt;
+&lt;p&gt;PHP标记&lt;br&gt;&lt;?php
+    // 打印hello,world!
+    $str = &#39;hello,world!&#39;;
+   echo $str;
+?&gt;&lt;br&gt;php以 &lt;?php 作为标识符，后面以 ?&gt; 作为结尾&lt;/p&gt;
+&lt;p&gt;PHP数据类型&lt;br&gt;  bool  布尔型  【字符串’0’也为false，空数组[]也为false】&lt;br&gt;  int  整型    【超出PHP_INT_MAX最大值，就变成浮点型】&lt;br&gt;  float 浮点型  【double和float是相同的，浮点数之间不要比较！】&lt;br&gt;  string 字符串 【双引号””会解析特殊字符\r\n\，建议使用PHP_EOL换行】&lt;br&gt;  array 数组   【使用strcmp安全比较二个字符串】&lt;br&gt;  object 对象&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>php介绍</title>
     <link href="http://104.168.159.133:4000/2021/05/07/php%E6%95%99%E5%AD%A6/"/>
     <id>http://104.168.159.133:4000/2021/05/07/php%E6%95%99%E5%AD%A6/</id>
     <published>2021-05-07T08:26:00.000Z</published>
-    <updated>2021-05-08T05:28:22.168Z</updated>
+    <updated>2021-05-08T06:05:52.719Z</updated>
     
-    <content type="html"><![CDATA[<p>什么是PHP？<br>    一种被广泛应用的开源通用脚本语言，尤其适用于Web开发<br>    英文名叫 Hypertext Preprocessor<br>    中文名叫 世界上最好的语言</p><p>PHP能做什么？<br>   ◦ 网站和 web 应用程序（服务器端脚本）<br>    ◦ 命令行脚本<br>    ◦ 桌面（GUI）应用程序</p><p>PHP运行环境？<br>    LNMP：Linux+Nginx+MySQL+PHP<br>    web网站一般运行在Linux服务器上，稳定安全，使用Nginx作为对外窗口，使用MySQL存储数据，PHP操作数据库。<br>   完整请求：客户端请求前端，Nginx把请求转给PHP，PHP调用响应接口，操作MySQL数据库，然后PHP重组数据结构，返回给Nginx，最后Nginx把数据交给前端，完成请求。 </p><p><img src="/images/pasted-2.png" alt="upload successful"></p><p>PHP安装？<br>    参考：<a href="https://lnmp.org/install.html">https://lnmp.org/install.html</a><br>    注意：设置时区，开启MySQL扩展，编译FPM模式</p><p>FastCGI 进程管理器（FPM）<br>    本文只讨论最常用的fpm模式，swoole会改变生命周期，暂不讨论<br>   编译 PHP 时需要 –enable-fpm 配置选项来支持FPM模式。<br>   功能：<br>          平滑停止/启动<br>      文件上传优化支持<br>      慢日志<br>        动态／静态子进程产生<br>      fastcgi_finish_request 特殊功能：用于在请求完成和刷新数据后，继续在后台执行耗时的工作（录入视频转换、统计处理等）；   </p><p>php-fmp配置注意事项：<br>    request_terminate_timeout  请求的超时中止时间，建议30s<br>    request_slowlog_timeout   请求超过多久写入慢日志<br>   rlimit_files  打开文件描述符的rlimit限制，建议65535<br>    access.log      访问日志的位置<br>   error.log     错误日志的位置 </p><p>PHP命令行模式？<br>    Linux系统：php -f ‘/root/test.php’<br>   Windows系统：php.exe -f ‘test.php’</p>]]></content>
+    <content type="html"><![CDATA[<p>什么是PHP？<br>    一种被广泛应用的开源通用脚本语言，尤其适用于Web开发<br>    英文名叫 Hypertext Preprocessor<br>    中文名叫 世界上最好的语言</p><p>PHP能做什么？<br>   ◦ 网站和 web 应用程序（服务器端脚本）<br>    ◦ 命令行脚本<br>    ◦ 桌面（GUI）应用程序</p><p>PHP运行环境？<br>    LNMP：Linux+Nginx+MySQL+PHP<br>    web网站一般运行在Linux服务器上，稳定安全，使用Nginx作为对外窗口，使用MySQL存储数据，PHP操作数据库。<br>   完整请求：客户端请求前端，Nginx把请求转给PHP，PHP调用响应接口，操作MySQL数据库，然后PHP重组数据结构，返回给Nginx，最后Nginx把数据交给前端，完成请求。</p><span id="more"></span>  <p><img src="/images/pasted-2.png" alt="upload successful"></p><p>PHP安装？<br>    参考：<a href="https://lnmp.org/install.html">https://lnmp.org/install.html</a><br>    注意：设置时区，开启MySQL扩展，编译FPM模式</p><p>FastCGI 进程管理器（FPM）<br>    本文只讨论最常用的fpm模式，swoole会改变生命周期，暂不讨论<br>   编译 PHP 时需要 –enable-fpm 配置选项来支持FPM模式。<br>   功能：<br>          平滑停止/启动<br>      文件上传优化支持<br>      慢日志<br>        动态／静态子进程产生<br>      fastcgi_finish_request 特殊功能：用于在请求完成和刷新数据后，继续在后台执行耗时的工作（录入视频转换、统计处理等）；   </p><p>php-fmp配置注意事项：<br>    request_terminate_timeout  请求的超时中止时间，建议30s<br>    request_slowlog_timeout   请求超过多久写入慢日志<br>   rlimit_files  打开文件描述符的rlimit限制，建议65535<br>    access.log      访问日志的位置<br>   error.log     错误日志的位置 </p><p>PHP命令行模式？<br>    Linux系统：php -f ‘/root/test.php’<br>   Windows系统：php.exe -f ‘test.php’</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;什么是PHP？&lt;br&gt;    一种被广泛应用的开源通用脚本语言，尤其适用于Web开发&lt;br&gt;    英文名叫 Hypertext Preprocessor&lt;br&gt;    中文名叫 世界上最好的语言&lt;/p&gt;
-&lt;p&gt;PHP能做什么？&lt;br&gt;   ◦ 网站和 web 应用程序（服</summary>
-      
+&lt;p&gt;PHP能做什么？&lt;br&gt;   ◦ 网站和 web 应用程序（服务器端脚本）&lt;br&gt;    ◦ 命令行脚本&lt;br&gt;    ◦ 桌面（GUI）应用程序&lt;/p&gt;
+&lt;p&gt;PHP运行环境？&lt;br&gt;    LNMP：Linux+Nginx+MySQL+PHP&lt;br&gt;    web网站一般运行在Linux服务器上，稳定安全，使用Nginx作为对外窗口，使用MySQL存储数据，PHP操作数据库。&lt;br&gt;   完整请求：客户端请求前端，Nginx把请求转给PHP，PHP调用响应接口，操作MySQL数据库，然后PHP重组数据结构，返回给Nginx，最后Nginx把数据交给前端，完成请求。&lt;/p&gt;</summary>
     
     
     
